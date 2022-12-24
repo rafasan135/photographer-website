@@ -16,17 +16,20 @@
     <section class="hero_section" id="home">
         <navbar class="navbar">
             <div class="logo_div">
-                <div class="logo">Rafael Santiago</div>
+                <div class="logo"><a href="#home">Rafael Santiago</a></div>
                 <div class="sub_logo">Photographer</div>
             </div>
-            <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#latest_work">Latest Work</a></li>
-                <li><a href="#Photo Gallery">Photo Gallery</a></li>
-                <li><a href="#about_me">About me</a></li>
-                <li><a href="#contact">Contact me</a></li>
+            <div class="toggle_menu" id="toggle_menu"><img src="/img/icons/icon_menu.svg"></div>
+            <ul class="menu" id="menu">
+                <li><a href="#home" id="menu_home">Home</a></li>
+                <li><a href="#latest_work" id="menu_latest_work">Latest Work</a></li>
+                <li><a href="#Photo Gallery" id="menu_photo_gallery">Photo Gallery</a></li>
+                <li><a href="#about_me" id="menu_about_me">About me</a></li>
+                <li><a href="#contact" id="menu_contact_me">Contact me</a></li>
             </ul>
         </navbar>
+        <script src="/menu.js"></script>
+        
 
 
         <div class="hero_text_box">
@@ -35,8 +38,8 @@
             <div class="hero_profession">Photographer & Traveler</div>
             
             <div class="hero_icons">
-                <img class="hero_icons" src="img/icons/icon_mail.svg"> 
-                <img class="hero_icons" src="img/icons/icon_instagram.svg">
+                <a href="#contact"><img class="hero_icon" src="/img/icons/icon_mail.svg"></a>
+                <a href="https://www.instagram.com/rafasan135"><img class="hero_icon" src="/img/icons/icon_instagram.svg"></a>
             </div>
         </div>
     </section>
@@ -50,22 +53,22 @@
             <div clas="box_card_tittle">
                 <h2 class="box_tittle">Travel Argentina through my lens</h2>
                 <ul class="box_list_icons">
-                    <li><img class="box_icons" src="img/icons/icon_calendar.svg"><p>5 Months</p></li>
-                    <li><img class="box_icons bx2" src="img/icons/icon_van.svg"><p>25.000 kms</p></li>
-                    <li><img class="box_icons" src="img/icons/icon_seasons.svg"><p>3 Seasons</p></li>
+                    <li><img class="box_icons" src="/img/icons/icon_calendar.svg"><p>5 Months</p></li>
+                    <li><img class="box_icons bx2" src="/img/icons/icon_van.svg"><p>25.000 kms</p></li>
+                    <li class="box_icon_3seasons"><img class="box_icons" src="/img/icons/icon_seasons.svg"><p>3 Seasons</p></li>
                 </ul>
                 
-                <div class="box_card_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, cumque? Magni natus quisquam sint aut repellat exercitationem. Natus quis eaque asperiores</div>
+                <div class="box_card_text">Join me on my trip through Argentina, traveling through the country with my photos, starting from the center-east of the country towards the extreme south in Ushuaia to the extreme north of the country, arriving at La Quiaca and then crossing the country from West to East from Mendoza to Misiones.</div>
                 
                 <div class="box_card_pictures">
-                    <img class="card" src="img/cards/salta_card.jpg" alt="">
-                    <img class="card" src="img/cards/entrerios_card.jpg" alt="">
-                    <img class="card" src="img/cards/jujuy_card.jpg" alt="">
-                    <img class="card" src="img/cards/catamarca_card.jpg" alt="">
-                    <img class="card" src="img/cards/chubut_card.jpg" alt="">
-                    <img class="card" src="img/cards/neuquen_card.jpg" alt="">
-                    <img class="card" src="img/cards/santacruz_card.jpg" alt="">
-                    <img class="card" src="img/cards/corrientes_card.jpg" alt="">
+                    <img class="card" src="/img/cards/salta_card.jpg" alt="">
+                    <img class="card" src="/img/cards/entrerios_card.jpg" alt="">
+                    <img class="card" src="/img/cards/jujuy_card.jpg" alt="">
+                    <img class="card" src="/img/cards/catamarca_card.jpg" alt="">
+                    <img class="card" src="/img/cards/chubut_card.jpg" alt="">
+                    <img class="card" src="/img/cards/neuquen_card.jpg" alt="">
+                    <img class="card" src="/img/cards/santacruz_card.jpg" alt="">
+                    <img class="card" src="/img/cards/corrientes_card.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -80,20 +83,21 @@
 
     <section class="about_me" id="about_me">
        
-        <div class="image_container"><img src="img/others/aboutme_picture.jpg" class="about_me_profile_picture"></div>
-       
-        <div class="about_me_textbox">
-            <div class="h2_aboutme">About me</div>
-            <p class="about_me_text">I'm Rafael, I was born in Argentina and since the end of 2017 I have been discovering the world through photography</p>
+        <div class="about_me_box"><img src="/img/others/aboutme_picture.jpg" class="about_me_profile_picture">
+        
+            <div class="about_me_textbox">
+                <h2 class="h2_aboutme">About me</h2>
+                <p class="about_me_text">I'm Rafael, I was born in Argentina and since the end of 2017 I have been discovering the world through photography</p>
 
-            <p class="about_me_text">Photography is my passion and when I combined it with traveling it was a wonderful experience. Every new place I visit and explore bring to me many feelings that I try to summarize with a picture.</p>
-            
-            <p class="about_me_text">I feel every day there is something new I can learn and I am happy that photography is one of this topics in my life.</p>
-            <div class="aboutme_btn">
-                <button class="instagram_btn"><a href="https://www.instagram.com/rafasan135" target="_blank">Visit my Instagram</a></button>
-                <button class="gallery_btn"><a href="https://photography.rafaelsantiago.site">Visit my Gallery</a></button>
-             </div>
-
+                <p class="about_me_text">Photography is my passion and when I combined it with traveling it was a wonderful experience. Every new place I visit and explore bring to me many feelings that I try to summarize with a picture.</p>
+                
+                <p class="about_me_text">I feel every day there is something new I can learn and I am happy that photography is one of this topics in my life.</p>
+                
+                <div class="aboutme_btn">
+                    <button class="instagram_btn"><a href="https://www.instagram.com/rafasan135" target="_blank">Visit my Instagram</a></button>
+                    <button class="gallery_btn"><a href="https://photography.rafaelsantiago.site">Visit my Gallery</a></button>
+                </div>
+            </div>
         </div>
     </section>
 
