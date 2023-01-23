@@ -12,11 +12,12 @@
     width: 100vw;
     height: 100vh;
     background-size: cover;
-    background-image: url(img/background/hero_background_chubut.jpg);
+    background-image: url(img/background/background_contact3.jpg);
 }
 
 .navbar {
     position: fixed;
+    z-index: 100;
     display: flex;
     width: 100vw;
     align-items: center;
@@ -62,6 +63,15 @@
     margin-right: var(--margin_sides);
 }
 
+.menu_link:hover {
+    transition: 200ms;
+    transform: scale(115%);
+}
+
+.toggle_menu {
+    display: none;
+}
+
 li {
     display: inherit;
     padding: 0 18px 0;
@@ -104,9 +114,14 @@ a {
     letter-spacing: .3rem;
 }
 
-.hero_icons {
-    margin-top: inherit;
+.hero_icon {
+    margin-top: 1.2rem;
     padding: 15px 12px 0;
+    cursor: pointer;
+}
+
+.hero_icon:hover {
+    transform: scale(105%);
 }
 
 /* Latest Work Section */
@@ -119,6 +134,7 @@ a {
     background: linear-gradient(180deg, rgba(51, 51, 51, 0.88) 0%, #333333 38.02%, #1F1F1F 73.44%);
     font-family: var(--lato);
     color: white;
+
 }
 
 .tittle_latest_work {
@@ -144,7 +160,7 @@ a {
 .box_card {
     background: linear-gradient(180deg, rgba(65, 65, 65, 0.54) 0%, rgba(73, 73, 73, 0.402131) 47.92%, rgba(31, 31, 31, 0.54) 100%);
     box-shadow: 0px 4px 56px rgba(0, 0, 0, 0.57);
-    margin: 14vh;
+    margin: 5vh 14vh 14vh;
 }
 
 .box_tittle {
@@ -180,10 +196,13 @@ p {
 }
 
 .box_card_text {
-    padding: 0 20vw 5vh;
     font-size: 20px;
     font-weight: 100;
-}
+    padding: 0 5vw;
+    text-align: justify;
+    margin-bottom:3vh;
+    }
+
 
 .box_card_pictures {
     width: 100%;
@@ -197,13 +216,35 @@ p {
 }
 
 .card {
-    border-radius: 5px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all 500ms ease-out;
+}
+
+
+.card:hover {
+    transform: scale(105%);
+    cursor: pointer;
+
+}
+
+
+.card_tittle {
+    font-size: 2rem;
+}
+
+.capa {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
     width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
 }
 
 .banner_to_gallery {
-    background-image: url(img/banner/banner_to_gallery.jpg);
+    background-image: url(/img/banner/banner_to_gallery.jpg);
     background-size: cover;
     width: 100vw;
     height: 45vh;
@@ -216,15 +257,13 @@ p {
 .banner_tittle {
 font-family: var(--lato);
 font-weight: 100;
-font-size: 44px;
+font-size: 3rem;
 padding-bottom: 7px;
 
 }
 
 .banner_paragraph {
     padding-bottom: 27px;
-
-
 }
 
 .banner_btn {
@@ -233,8 +272,15 @@ padding-bottom: 7px;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    width: 160px;
-    height: 30px;
+    width: 10rem;
+    height: 2.2rem;
+}
+
+.banner_btn:hover {
+    transform: scale(110%);
+    cursor: pointer;
+    background: black;
+    color: rgba(255, 255, 255, 0.95);
 }
 
 /* Section About Me */
@@ -242,49 +288,55 @@ padding-bottom: 7px;
 .about_me {
     width: 100vw;
     height: 100vh;
-    display: grid;
+    display: flex;
     align-items: center;
-    justify-items: center;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 15px;
+    justify-content: center;
     color: rgba(176, 176, 176, 0.95);
     background-color: black;
+
 }
 
-.image_container {
+.about_me_box {
     display: flex;
-    justify-content: center;
+    width: 80%;
 }
 
 .about_me_profile_picture {
-    object-fit: cover;
-    width: 90%;
-    margin-left: 200px;
-    margin-left: 6vw;
-
+    display: flex;
+    width: 25vw;
+    object-fit: contain;
 }
 
 .h2_aboutme {
+    display:inline-flex;
     font-family: var(--lato);
     font-size: 3.2rem;
     color: rgba(255, 255, 255, 0.95);
     font-weight: 300;
     letter-spacing: 5px;
-    padding: 0.6rem 4rem 0.6rem 0.6rem;
-
+    padding: 0.6rem 0rem 0.6rem 0.6rem;
 }
 
 .about_me_text {
+    display: flex;
     line-height: 150%;
     letter-spacing: 5px;
     font-family: var(--lato);
-    font-size: 1.2rem;
-    padding: 0.6rem 4rem 0.6rem 0.6rem;
+    font-size: 1rem;
+    padding: 0.6rem 0rem 0.6rem 0.6rem;
+    margin: 0;
+}
+
+.about_me_textbox {
+    display: flex;
+    flex-direction: column;
+    padding-left: 4vw;
+    justify-content: center;
 }
 
 .aboutme_btn {
-    padding: 3.5rem 4rem 0.6rem 0.6rem;
-
+    display: flex;
+    padding: 3.5rem 0rem 0.6rem 0rem;
 }
 
 .instagram_btn {
@@ -294,8 +346,7 @@ padding-bottom: 7px;
     border-radius: 5px;
     font-size: 1rem;
     font-family: var(--lato);
-    margin-right: 2rem;
-    width: 10.5rem;
+    margin-right: 1rem;
 }
 
 .gallery_btn {
@@ -305,18 +356,33 @@ padding-bottom: 7px;
     padding: 0.7rem 1rem;
     border-radius: 5px;
     font-size: 1rem;
-    width: 10.5rem;
     font-family: var(--lato);   
+}
+
+.gallery_btn:hover, .instagram_btn:hover {
+    transform: scale(103%);
+}
+
+.gallery_btn:active {
+    background: white;
+    color: black;
+}
+
+.instagram_btn:active {
+    background: black;
+    color: white;
+    border: 0.5px solid white
 }
 
 /* Contact Section */
 
 .contact_section {
-    background-image: url(img/background/background_contact.jpg);
+    background-image: url(/img/background/background_contact3.jpg);
     background-size: cover;
     width: 100vw;
     height:100vh;
     display: flex;
+    flex-direction: column;
     align-content: center;
     justify-content: center;
 }
@@ -369,17 +435,157 @@ padding-bottom: 7px;
 
 .form_cta {
     font-family: var(--lato);
-    font-size: 1rem;
-    background-color:rgba(51, 51, 51, 0.88);
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    background-color: #2D8484;
+    width: 50%;
+    border-radius: 7px;
+    justify-self: center;
     color: #FFFFFF;
     border: none;
     padding: .7em 0;
     cursor:pointer;
 }
 
+.form_cta:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+    color: black;
+}
+
 /* Footer Section */
 
-.footer_section {
-    background: linear-gradient(180deg, #1E1E1E 0%, #1E1E1E 20%, #1E1E1E 31.25%, #1E1E1E 40%, rgba(15, 15, 15, 0.98) 73.96%, rgba(0, 0, 0, 0.97) 93.75%);
-    height: 100%
+.footer{
+display: flex;
+background-color: rgba(0, 0, 0, 0.55);
+color: rgba(206, 206, 206, 0.87);
+flex-direction: column;
+font-size: 0.9rem;
+letter-spacing: 2px;
+font-family: var(--lato);
+font-weight: 300;
+padding: 10px 0;
+align-items: center;
+text-align: center;
+
+}
+
+
+@media (max-width: 1061px) {
+    .box_card_pictures {
+        column-gap: 1rem;
+    }    
+}
+
+@media (max-width: 1024px) {
+    .menu {
+        display: flex;
+        position: absolute;
+        top:0;
+        right: 0;
+        margin: 0;
+        height: 50vh;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-color: #333333;
+        font-size: 2rem;
+        transition: 500ms;
+        padding: 50px;
+        transform:translateY(-100%);
+        width: 100vw;
+        opacity: 0.92;
+    }
+
+    .menu--show {
+        transform:translateY(0);
+        width: 100vw;
+    }    
+
+    .toggle_menu {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        margin-right: 5vw;
+        z-index: 100;
+    }    
+
+    .logo_div {
+        margin-left: 5vw;
+    }
+
+    .form {
+         background: rgba(0, 0, 0, 0.76);
+         box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+         width: 55%;
+         max-width: 400px;
+         border-radius: 10px;
+         padding: 25px 10px;
+         margin: auto;
+        }
+
+    .form_tittle {
+        font-size: 1.8rem;
+    }
+    
+    .about_me_textbox {
+        padding: 0;
+    }
+
+    .about_me_profile_picture {
+        display: none;
+    }
+}
+
+@media (max-width: 850px) {
+    .box_card {
+        margin: 3vh 5vw;
+    }
+
+    .box_card_text {
+        padding: 0 5vw;
+        text-align: justify;
+    }
+
+.aboutme_btn {
+    display: flex;
+    justify-content: center;
+}
+
+.instagram_btn {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    margin-right: 3rem;
+}
+
+.form_tittle {
+        font-size: 1.7rem;
+}
+}
+
+@media (max-width: 650px) {
+    .hero_name {
+        font-size: 22vw; 
+    }
+
+    .hero_profession {
+        font-size: 5vw;
+        padding: 2vh 0;
+    }
+    .box_icon_3seasons {
+        padding-top: 25px;
+    }
+
+    .about_me_text {
+        font-size: ;
+    }
+
+    .instagram_btn {
+        margin-right: 1rem;
+    }
+
+    .form {
+        width: 80%;
+    }
 }
